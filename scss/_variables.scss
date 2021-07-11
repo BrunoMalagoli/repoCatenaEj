@@ -1,0 +1,9 @@
+$fondo:rgb(211, 211, 211);
+$hover: rgb(255, 71, 71);
+$aviso: yellow;
+$input-btn-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans';
+//Mixin
+@mixin mixin1 ($colorLetra,$tamanioLetra){
+    color:$colorLetra;
+    font-size:$tamanioLetra;
+}
