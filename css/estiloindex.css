@@ -135,9 +135,7 @@ body {
 
 /*Fin Tabla*/
 /*Productos*/
-#productos {
-  /*Retocando la foto del producto*/
-  /*Fin de retoque imagen Malbec*/ }
+
   #productos .productos__encabezados {
     color: #0d0d0d;
     text-transform: uppercase;
@@ -199,7 +197,11 @@ body {
   grid-template-columns: 20% 20% 20%;
   grid-template-rows: repeat(5, 1fr);
   height: 600px;
-  grid-template-areas: "header header header" "zona delay costo" "zona delay costo" "zona delay costo" "zona delay costo";
+  grid-template-areas: "header header header"
+ "zona delay costo"
+ "zona delay costo"
+ "zona delay costo"
+ "zona delay costo";
   text-align: center; }
   .grillEntregas .headerGrilla {
     background-color: #b1acac;
@@ -514,7 +516,11 @@ legend {
     grid-template-columns: 20% 20% 20%;
     grid-template-rows: repeat(5, 1fr);
     height: 600px;
-    grid-template-areas: "header header header" "zona delay costo" "zona delay costo" "zona delay costo" "zona delay costo";
+    grid-template-areas: "header header header"
+ "zona delay costo"
+ "zona delay costo"
+ "zona delay costo"
+ "zona delay costo";
     text-align: center; }
   .headerGrilla {
     background-color: #b1acac;
@@ -807,7 +813,11 @@ legend {
     grid-template-columns: 20% 20% 20%;
     grid-template-rows: repeat(5, 1fr);
     height: 600px;
-    grid-template-areas: "header header header" "zona delay costo" "zona delay costo" "zona delay costo" "zona delay costo";
+    grid-template-areas: "header header header"
+ "zona delay costo"
+ "zona delay costo"
+ "zona delay costo"
+ "zona delay costo";
     text-align: center; }
   .headerGrilla {
     background-color: #b1acac;
@@ -1100,7 +1110,11 @@ legend {
     grid-template-columns: 20% 20% 20%;
     grid-template-rows: repeat(5, 1fr);
     height: 600px;
-    grid-template-areas: "header header header" "zona delay costo" "zona delay costo" "zona delay costo" "zona delay costo";
+    grid-template-areas: "header header header"
+ "zona delay costo"
+ "zona delay costo"
+ "zona delay costo"
+ "zona delay costo";
     text-align: center; }
   .headerGrilla {
     background-color: #b1acac;
