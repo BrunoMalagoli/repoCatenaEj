@@ -40,33 +40,70 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: lightgray;
     border: 1px solid black;
-    font-weight: bold; }
+    font-weight: bold;
+    transition: background-color 200ms ease-out; }
   #nav .nav__items:hover {
     cursor: pointer;
-    background-color: #ff4747; }
+    background-color: #ff4747;
+    transition: 300ms ease-in; }
   #nav .nav__items a {
     color: #363434; }
+  #nav .nav__items a:hover {
+    transition: 200ms;
+    color: rgba(255, 255, 255, 0.822); }
 
 .secciones .secciones__titulo {
   color: #0d0d0d;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  padding: 5px;
+  padding: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
   background-color: lightgray;
   border: 1px solid black;
-  border-radius: 5px; }
+  border-radius: 5px;
+  font-size: 2em;
+  transition: background-color 200ms; }
 
 .secciones .secciones__titulo:hover {
-  background-color: #ff4747; }
+  background-color: #ff4747;
+  color: rgba(255, 255, 255, 0.904);
+  transition: 300ms ease-in-out; }
 
 .secciones__contenido {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center; }
+  align-items: flex-start; }
   .secciones__contenido .contenido__items {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     flex-basis: 28%;
-    margin-bottom: 2%; }
+    margin-bottom: 2%;
+    border: 1px solid black;
+    margin-top: 1%;
+    padding: 1%;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px #b6b6b6;
+    transition: box-shadow 300ms ease-out; }
+  .secciones__contenido .contenido__items:hover {
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(247, 118, 118, 0.507);
+    transition: box-shadow 500ms ease-in; }
+  .secciones__contenido .secciones__contenido--imagen1 {
+    width: 90%;
+    height: 80%;
+    position: relative;
+    margin-top: 3%; }
+  .secciones__contenido .secciones__contenido--imagen2 {
+    width: 74.6%;
+    height: 64.6%;
+    position: relative;
+    margin-top: 3%; }
+  .secciones__contenido .secciones__contenido--imagen3 {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    align-content: baseline;
+    margin-top: 11%;
+    margin-bottom: 11.5%; }
 
 /*Comienzo Tabla*/
 #tabla {
@@ -76,14 +113,17 @@ body {
   width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
-  align-items: center; }
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
 
 #tabla__titulos {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 3%; }
   #tabla__titulos .titulos__items {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #262626;
     background-color: lightgray;
     height: 20px;
@@ -93,11 +133,14 @@ body {
     margin-bottom: 5px;
     border: 1px solid black;
     border-radius: 10px;
-    padding-bottom: 3px; }
+    padding-bottom: 3px;
+    transition: 200ms ease-out; }
   #tabla__titulos .titulos__items:hover {
     background-color: #ff4747;
+    color: rgba(255, 255, 255, 0.849);
+    text-transform: uppercase;
     font-weight: bold;
-    text-transform: uppercase; }
+    transition: 500ms ease-in; }
 
 #tabla__seccion1, #tabla__seccion2, #tabla__seccion3 {
   display: flex;
@@ -135,7 +178,9 @@ body {
 
 /*Fin Tabla*/
 /*Productos*/
-
+#productos {
+  /*Retocando la foto del producto*/
+  /*Fin de retoque imagen Malbec*/ }
   #productos .productos__encabezados {
     color: #0d0d0d;
     text-transform: uppercase;
@@ -150,13 +195,15 @@ body {
     word-spacing: 10%;
     margin: 3%; }
   #productos #productos__imagenes--Nicola {
+    transition: 300ms;
     margin-bottom: 3%; }
   #productos .productos__imagenes {
     width: 40%;
     height: 40%;
     position: relative;
     left: 10%;
-    bottom: 15%; }
+    bottom: 15%;
+    transition: 300ms; }
   #productos #productos__imagenes--Malbec {
     height: 25%;
     width: 25%;
@@ -197,11 +244,7 @@ body {
   grid-template-columns: 20% 20% 20%;
   grid-template-rows: repeat(5, 1fr);
   height: 600px;
-  grid-template-areas: "header header header"
- "zona delay costo"
- "zona delay costo"
- "zona delay costo"
- "zona delay costo";
+  grid-template-areas: "header header header" "zona delay costo" "zona delay costo" "zona delay costo" "zona delay costo";
   text-align: center; }
   .grillEntregas .headerGrilla {
     background-color: #b1acac;
@@ -516,11 +559,7 @@ legend {
     grid-template-columns: 20% 20% 20%;
     grid-template-rows: repeat(5, 1fr);
     height: 600px;
-    grid-template-areas: "header header header"
- "zona delay costo"
- "zona delay costo"
- "zona delay costo"
- "zona delay costo";
+    grid-template-areas: "header header header" "zona delay costo" "zona delay costo" "zona delay costo" "zona delay costo";
     text-align: center; }
   .headerGrilla {
     background-color: #b1acac;
@@ -813,11 +852,7 @@ legend {
     grid-template-columns: 20% 20% 20%;
     grid-template-rows: repeat(5, 1fr);
     height: 600px;
-    grid-template-areas: "header header header"
- "zona delay costo"
- "zona delay costo"
- "zona delay costo"
- "zona delay costo";
+    grid-template-areas: "header header header" "zona delay costo" "zona delay costo" "zona delay costo" "zona delay costo";
     text-align: center; }
   .headerGrilla {
     background-color: #b1acac;
@@ -1110,11 +1145,7 @@ legend {
     grid-template-columns: 20% 20% 20%;
     grid-template-rows: repeat(5, 1fr);
     height: 600px;
-    grid-template-areas: "header header header"
- "zona delay costo"
- "zona delay costo"
- "zona delay costo"
- "zona delay costo";
+    grid-template-areas: "header header header" "zona delay costo" "zona delay costo" "zona delay costo" "zona delay costo";
     text-align: center; }
   .headerGrilla {
     background-color: #b1acac;

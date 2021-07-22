@@ -46,15 +46,20 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
         background-color: rgb(211, 211, 211);
         border: 1px solid black;
         font-weight: bold;
-    
+        transition: background-color 200ms ease-out;
     }
     .nav__items:hover{
         cursor: pointer;
         background-color: $hover;
+        transition: 300ms ease-in;
     }
     /*Borrando color azul de los items del nav*/
     .nav__items a{
         color: rgb(54, 52, 52);
+    }
+    .nav__items a:hover{
+        transition: 200ms;
+        color: rgba(255, 255, 255, 0.822);
     }
 }
  //Fin nav
@@ -63,25 +68,61 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     .secciones__titulo{
         color: rgb(13, 13, 13);
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        padding: 5px;
+        padding: 3px;
+        padding-left: 7px;
+        padding-right: 7px;
         background-color: rgb(211, 211, 211);
         border: 1px solid black;
         border-radius: 5px;
         font-size: 2em;
+        transition: background-color 200ms;
     }
     .secciones__titulo:hover{
         background-color: $hover;
+        color: rgba(255, 255, 255, 0.904);
+        transition: 300ms ease-in-out;
     }
 }
 .secciones__contenido{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     .contenido__items{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         flex-basis: 28%;
         margin-bottom: 2%;
+        border: 1px solid black;
+        margin-top: 1%;
+        padding: 1%;
+        text-align: center;
+        box-shadow: 1px 1px 1px 1px rgb(182, 182, 182);
+        transition: box-shadow 300ms ease-out;
+    }
+    .contenido__items:hover{
+        box-shadow: 1.5px 1.5px 1.5px 1.5px rgba(247, 118, 118, 0.507);
+        transition: box-shadow 500ms ease-in;
+    }
+    //estilado imagenes cards
+    .secciones__contenido--imagen1{
+        width: 90%;
+        height: 80%;
+        position: relative;
+        margin-top: 3%;
+    }
+    .secciones__contenido--imagen2{
+        width: 74.6%;
+        height: 64.6%;
+        position: relative;
+        margin-top: 3%;
+    }
+    .secciones__contenido--imagen3{
+        width: 90%;
+        height: 100%;
+        position: relative;
+        align-content:baseline;
+        margin-top: 11%; 
+        margin-bottom: 11.5%;
     }
 }
 /*Comienzo Tabla*/
@@ -93,13 +134,16 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 #tabla__titulos{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 3%;
     .titulos__items{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         color: rgb(  38, 38, 38);
         background-color: rgb(211, 211, 211);
         height: 20px;
@@ -110,11 +154,14 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
         border: 1px solid black;
         border-radius: 10px;
         padding-bottom: 3px;
+        transition: 200ms ease-out;
     } 
     .titulos__items:hover{
         background-color:$hover;
-        font-weight: bold;
+        color: rgba(255, 255, 255, 0.849);
         text-transform: uppercase;
+        font-weight: bold;
+        transition: 500ms ease-in;
     }
     
 }
@@ -177,6 +224,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     
     }
     #productos__imagenes--Nicola{
+        transition: 300ms;
         margin-bottom: 3%;
     }
     .productos__imagenes{
@@ -185,6 +233,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
         position: relative;
         left: 10%;
         bottom: 15%;
+        transition: 300ms;
     }
     /*Retocando la foto del producto*/
     #productos__imagenes--Malbec{
@@ -202,7 +251,6 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     .productos__imagenes:hover{
         transform: scale(1.2,1.2);
         transition: 300ms;
-    
     }
 }
 /*Carousel*/
